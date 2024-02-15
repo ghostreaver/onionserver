@@ -54,7 +54,7 @@ sudo systemctl restart sshd
 Install necessary libraries
 
 ```shell
-sudo apt-get -y install libsodium-dev
+sudo apt-get -y install libapache2-mod-php8.3 libsodium-dev
 ```
 
 Install necessary softwares
@@ -70,7 +70,7 @@ Install PHP 8.3
 ```shell
 sudo add-apt-repository -y ppa:ondrej/php
 sudo apt-get -y update
-sudo apt-get -y install php8.3 php8.3-cli php8.3-{bz2,curl,mbstring,intl} libapache2-mod-php8.3
+sudo apt-get -y install php8.3 php8.3-cli php8.3-{bz2,curl,mbstring,intl}
 sudo a2enmod php8.3
 sudo systemctl reload apache2
 sudo truncate -s 0 /var/www/html/index.html

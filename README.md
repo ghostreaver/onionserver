@@ -48,7 +48,7 @@ sudo sed -i "s/#Port 22/Port 49622/" /etc/ssh/sshd_config
 sudo sed -i "s/#LoginGraceTime 2m/LoginGraceTime 2m/" /etc/ssh/sshd_config
 sudo sed -i "s/#PermitRootLogin prohibit-password/PermitRootLogin no/" /etc/ssh/sshd_config
 sudo sed -i "s/#StrictModes yes/StrictModes yes/" /etc/ssh/sshd_config
-sudo systemctl restart sshd
+sudo systemctl restart sshd.service
 ```
 
 Install necessary libraries
@@ -61,8 +61,8 @@ Install necessary softwares
 
 ```shell
 sudo apt-get -y install apache2 apt-transport-https autoconf curl build-essential fail2ban gcc git gpg make nano software-properties-common unattended-upgrades tor torsocks wget
-sudo systemctl status apache2
-sudo systemctl enable tor
+sudo systemctl status apache2.service
+sudo systemctl enable tor.service
 ```
 
 Install PHP 8.3
@@ -72,7 +72,7 @@ sudo add-apt-repository -y ppa:ondrej/php
 sudo apt-get -y update
 sudo apt-get -y install php8.3 php8.3-cli php8.3-{bz2,curl,mbstring,intl} libapache2-mod-php8.3 
 sudo a2enmod php8.3
-sudo systemctl reload apache2
+sudo systemctl reload apache2.service
 sudo truncate -s 0 /var/www/html/index.html
 ```
 
@@ -113,9 +113,9 @@ There are several ways to create a `.onion` address. We will see here two ways o
 sudo nano /etc/tor/torrc
 HiddenServiceDir /var/lib/tor/<service-name>/
 HiddenServicePort 80 127.0.0.1:80
-sudo systemctl reload tor
-sudo systemctl restart tor
-sudo systemctl status tor
+sudo systemctl reload tor.service
+sudo systemctl restart tor.service
+sudo systemctl status tor.service
 ```
 
 Retrieve the Hidden Service URL
@@ -210,9 +210,9 @@ chmod -R u+rwX,og-rwx /var/lib/tor/<service-name>
 Then edit `/etc/tor/torrc` and add new service with that folder.
 
 ```shell
-sudo systemctl reload tor
-sudo systemctl restart tor
-sudo systemctl status tor
+sudo systemctl reload tor.service
+sudo systemctl restart tor.service
+sudo systemctl status tor.service
 ```
 
 * * *
@@ -258,7 +258,7 @@ sudo apache2ctl configtest
 Restart Apache server
 
 ```shell
-sudo systemctl restart apache2
+sudo systemctl restart apache2.service
 ```
 
 * * *

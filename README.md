@@ -261,3 +261,9 @@ Restart Apache server
 ```shell
 sudo systemctl restart apache2
 ```
+
+* * *
+
+#### Conclusion
+
+We are done, we can now visit our website using Tor Browser and pointing to the onion address we just configured above.

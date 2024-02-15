@@ -68,7 +68,6 @@ sudo systemctl enable tor
 Install PHP 8.3
 
 ```shell
-sudo dpkg -l | grep php | tee packages.txt
 sudo add-apt-repository -y ppa:ondrej/php
 sudo apt-get -y update
 sudo apt-get -y install php8.3 php8.3-cli php8.3-{bz2,curl,mbstring,intl} libapache2-mod-php8.3

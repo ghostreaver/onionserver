@@ -137,7 +137,6 @@ cd mkp224o/
 ./autogen.sh
 ./configure
 make
-./mkp224o -h
 ```
 
 Using mkp224o

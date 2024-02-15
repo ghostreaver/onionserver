@@ -1,6 +1,6 @@
 ## Onion Server
 
-Ideal setup for server hosting Tor Hidden services (Websites) based on Ubuntu 22.04 server freshly installed
+Setup for server hosting Tor Hidden services (Websites) based on Ubuntu 22.04 server freshly installed.
 
 * * *
 

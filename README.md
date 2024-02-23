@@ -1,6 +1,6 @@
 ## Onion Server
 
-Setup for server hosting Tor Hidden services (Websites) based on Ubuntu 22.04 server freshly installed.
+Setup for a server hosting Tor Hidden services (Websites) based on Ubuntu 22.04 server freshly installed.
 
 * * *
 
@@ -15,10 +15,7 @@ passwd <username>
 Configure APT sources
 
 ```shell
-sudo add-apt-repository -y main
-sudo add-apt-repository -y restricted
-sudo add-apt-repository -y universe
-sudo add-apt-repository -y multiverse
+sudo add-apt-repository -y main && sudo add-apt-repository -y restricted && sudo add-apt-repository -y universe && sudo add-apt-repository -y multiverse
 ```
 
 Keep system safe

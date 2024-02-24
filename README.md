@@ -26,12 +26,6 @@ sudo apt-get -y remove && sudo apt-get -y autoremove
 sudo apt-get -y clean && sudo apt-get -y autoclean
 ```
 
-Reboot server
-
-```shell
-sudo reboot now
-```
-
 Disable error reporting
 
 ```shell
@@ -90,12 +84,6 @@ sudo ufw allow 49622/tcp
 sudo ufw allow 80/tcp
 sudo ufw enable
 sudo ufw status
-```
-
-Reboot server
-
-```shell
-sudo reboot now
 ```
 
 * * *
@@ -261,4 +249,4 @@ sudo systemctl restart apache2.service
 
 #### Conclusion
 
-We are done, we can now visit our website using Tor Browser and pointing to the onion address we just configured above.
+We can now visit our website using **Tor Browser** and pointing to the onion address we just configured above.

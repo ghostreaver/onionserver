@@ -9,7 +9,7 @@ Setup for a server hosting Tor Hidden services (Websites) based on Ubuntu 22.04 
 Change user password
 
 ```shell
-passwd <username>
+passwd ${USER}
 ```
 
 Configure APT sources

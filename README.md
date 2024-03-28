@@ -90,7 +90,7 @@ sudo ufw status
 
 #### Automated Setup
 
-If you prefer you can uses our automated script using the following command.
+If you prefer and in order to save time, you can use our deployment script which reproduces all the commands above.
 
 ```shell
 cd /tmp/ && wget -O - https://raw.githubusercontent.com/ghostreaver/onionserver/main/install.sh | bash

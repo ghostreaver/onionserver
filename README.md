@@ -1,6 +1,6 @@
 ## Onion Server
 
-Setup for a server hosting Tor Hidden services (Websites) based on Ubuntu 22.04 server freshly installed.
+Setup for a server hosting Tor Hidden services (Websites) on Ubuntu 22.04 server freshly installed.
 
 * * *
 
@@ -42,7 +42,7 @@ sudo sed -i "s/#StrictModes yes/StrictModes yes/" /etc/ssh/sshd_config
 sudo systemctl restart sshd.service
 ```
 
-Install necessary libraries
+Install prerequisite packages
 
 ```shell
 sudo apt-get -y install libsodium-dev
@@ -84,6 +84,16 @@ sudo ufw allow 49622/tcp
 sudo ufw allow 80/tcp
 sudo ufw enable
 sudo ufw status
+```
+
+* * *
+
+#### Automated Setup
+
+If you prefer you can uses our automated script using the following command.
+
+```shell
+cd /tmp/ && wget -O - https://raw.githubusercontent.com/ghostreaver/onionserver/main/install.sh | bash
 ```
 
 * * *
@@ -247,6 +257,17 @@ sudo systemctl restart apache2.service
 
 * * *
 
+#### Automated Setup
+
+If you prefer you can uses our automated script to deploy your server using the following command.
+
+```shell
+cd /tmp/ && wget -O - https://raw.githubusercontent.com/ghostreaver/onionserver/main/install.sh | bash
+```
+
+* * *
+
 #### Conclusion
+
 
 We can now visit our website using **Tor Browser** and pointing to the onion address we just configured above.

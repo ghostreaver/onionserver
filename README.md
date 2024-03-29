@@ -16,12 +16,6 @@ passwd ${USER}
 
 #### Prepare the environment
 
-Change user password
-
-```shell
-passwd ${USER}
-```
-
 Configure APT sources
 
 ```shell

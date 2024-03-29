@@ -1,9 +1,5 @@
 #!/bin/bash
 
-## Change user password
-## --------------------
-passwd ${USER}
-
 ## Configure APT sources
 ## ---------------------
 sudo add-apt-repository -y main && sudo add-apt-repository -y restricted && sudo add-apt-repository -y universe && sudo add-apt-repository -y multiverse
@@ -58,3 +54,7 @@ sudo ufw allow 49622/tcp
 sudo ufw allow 80/tcp
 sudo ufw enable
 sudo ufw status
+
+## Reboot server
+## -------------
+sudo reboot now

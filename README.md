@@ -4,6 +4,16 @@ Setup for a server hosting Tor Hidden services (Websites) on Ubuntu 22.04 server
 
 * * *
 
+#### Change the user password
+
+Change user password
+
+```shell
+passwd ${USER}
+```
+
+* * *
+
 #### Prepare the environment
 
 Change user password
@@ -84,6 +94,12 @@ sudo ufw allow 49622/tcp
 sudo ufw allow 80/tcp
 sudo ufw enable
 sudo ufw status
+```
+
+Reboot server
+
+```shell
+sudo reboot now
 ```
 
 * * *

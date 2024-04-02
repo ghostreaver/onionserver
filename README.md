@@ -267,16 +267,6 @@ sudo systemctl restart apache2.service
 
 * * *
 
-#### Automated Setup
-
-If you prefer you can uses our automated script to deploy your server using the following command.
-
-```shell
-cd /tmp/ && wget -O - https://raw.githubusercontent.com/ghostreaver/onionserver/main/install.sh | bash
-```
-
-* * *
-
 #### Conclusion
 
 

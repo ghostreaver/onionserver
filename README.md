@@ -103,7 +103,7 @@ sudo reboot now
 If you prefer and in order to save time, you can use our deployment script which reproduces all the commands above.
 
 ```shell
-cd /tmp/ && wget -O - https://raw.githubusercontent.com/ghostreaver/onionserver/main/install.sh | bash
+cd /tmp/ && wget -O - https://raw.githubusercontent.com/neoslab/onionserver/main/install.sh | bash
 ```
 
 * * *

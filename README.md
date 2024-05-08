@@ -25,9 +25,9 @@ sudo add-apt-repository -y main && sudo add-apt-repository -y restricted && sudo
 Keep system safe
 
 ```shell
-sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
-sudo apt-get -y remove && sudo apt-get -y autoremove
-sudo apt-get -y clean && sudo apt-get -y autoclean
+sudo apt -y update && sudo apt -y upgrade && sudo apt -y dist-upgrade
+sudo apt -y remove && sudo apt -y autoremove
+sudo apt -y clean && sudo apt -y autoclean
 ```
 
 Disable error reporting
@@ -49,13 +49,13 @@ sudo systemctl restart sshd.service
 Install prerequisite packages
 
 ```shell
-sudo apt-get -y install libsodium-dev
+sudo apt -y install libsodium-dev
 ```
 
 Install necessary softwares
 
 ```shell
-sudo apt-get -y install apache2 apt-transport-https autoconf curl build-essential fail2ban gcc git gpg make nano software-properties-common unattended-upgrades tor torsocks wget
+sudo apt -y install apache2 apt-transport-https autoconf curl build-essential fail2ban gcc git gpg make nano software-properties-common unattended-upgrades tor torsocks wget
 sudo systemctl status apache2.service
 sudo systemctl enable tor.service
 ```
@@ -64,8 +64,8 @@ Install PHP 8.3
 
 ```shell
 sudo add-apt-repository -y ppa:ondrej/php
-sudo apt-get -y update
-sudo apt-get -y install php8.3 php8.3-cli php8.3-{bz2,curl,mbstring,intl} libapache2-mod-php8.3 
+sudo apt -y update
+sudo apt -y install php8.3 php8.3-cli php8.3-{bz2,curl,mbstring,intl} libapache2-mod-php8.3 
 sudo a2enmod php8.3
 sudo systemctl reload apache2.service
 sudo truncate -s 0 /var/www/html/index.html

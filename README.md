@@ -1,6 +1,6 @@
 ## Onion Server
 
-Setup for a server hosting Tor Hidden services (Websites) on Ubuntu 22.04 server freshly installed.
+Setup for a server hosting Tor Hidden services (Websites) on Ubuntu 24.04 server freshly installed.
 
 * * *
 
@@ -226,22 +226,22 @@ sudo systemctl status tor.service
 We will now create a virtual host which will host the content of our site.
 
 ```shell
-sudo mkdir -p /var/www/<onion-url>/public_html
-sudo chown -R $USER:$USER /var/www/<onion-url>/public_html
+sudo mkdir -p /var/www/<onion-domain>/public_html
+sudo chown -R $USER:$USER /var/www/<onion-domain>/public_html
 sudo chmod -R 755 /var/www
-echo "Hello Domain" | sudo tee /var/www/<onion-url>/public_html/index.html >/dev/null
-sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/<onion-url>.conf
-sudo nano /etc/apache2/sites-available/<onion-url>.conf
+echo "Hello Domain" | sudo tee /var/www/<onion-domain>/public_html/index.html >/dev/null
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/<onion-domain>.conf
+sudo nano /etc/apache2/sites-available/<onion-domain>.conf
 ```
 
 Copy and edit the below content according to your hidden service URL.
 
 ```
 <VirtualHost *:80>
-    ServerAdmin webmaster@<onion-url>
-    ServerName <onion-url>
-    ServerAlias www.<onion-url>
-    DocumentRoot /var/www/<onion-url>/public_html 
+    ServerAdmin webmaster@<onion-domain>
+    ServerName <onion-domain>
+    ServerAlias www.<onion-domain>
+    DocumentRoot /var/www/<onion-domain>/public_html 
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost> 
@@ -250,7 +250,7 @@ Copy and edit the below content according to your hidden service URL.
 Add the website to Apache configuration
 
 ```shell
-sudo a2ensite <onion-url>.conf
+sudo a2ensite <onion-domain>.conf
 ```
 
 Check the configuration

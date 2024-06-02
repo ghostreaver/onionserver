@@ -55,7 +55,7 @@ sudo apt -y install libsodium-dev
 Install necessary softwares
 
 ```shell
-sudo apt -y install apache2 apt-transport-https autoconf curl build-essential fail2ban gcc git gpg make nano software-properties-common unattended-upgrades tor torsocks wget
+sudo apt -y install apache2 apt-transport-https autoconf curl build-essential gcc git gpg make nano software-properties-common unattended-upgrades tor torsocks wget
 sudo systemctl status apache2.service
 sudo systemctl enable tor.service
 ```
@@ -67,14 +67,6 @@ sudo apt -y install php8.3 php8.3-cli php8.3-{bz2,curl,mbstring,intl} libapache2
 sudo a2enmod php8.3
 sudo systemctl reload apache2.service
 sudo truncate -s 0 /var/www/html/index.html
-```
-
-Edit Fail2Ban settings
-
-```shell
-sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-sudo systemctl restart fail2ban.service 
-sudo systemctl status fail2ban.service 
 ```
 
 Setting the firewall

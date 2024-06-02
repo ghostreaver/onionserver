@@ -27,7 +27,7 @@ sudo systemctl restart ssh.service
 sudo apt -y install libsodium-dev
 
 ## Install necessary softwares
-sudo apt -y install apache2 apt-transport-https autoconf curl build-essential fail2ban gcc git gpg make nano software-properties-common unattended-upgrades tor torsocks wget
+sudo apt -y install apache2 apt-transport-https autoconf curl build-essential gcc git gpg make nano software-properties-common unattended-upgrades tor torsocks wget
 sudo systemctl status apache2.service
 sudo systemctl enable tor.service
 
